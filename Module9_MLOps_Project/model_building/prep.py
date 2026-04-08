@@ -41,10 +41,13 @@ ytest.to_csv("ytest.csv",index=False)
 
 files = ["Xtrain.csv","Xtest.csv","ytrain.csv","ytest.csv"]
 
+
 for file_path in files:
     api.upload_file(
         path_or_fileobj=file_path,
-        path_in_repo=file_path.split("/")[-1],  # just the filename
+        path_in_repo=file_path.split("/")[-1],
         repo_id="chaitram/tourism-package-prediction",
         repo_type="dataset",
+        commit_message="Uploading processed files",
+        create_pr=True
     )
