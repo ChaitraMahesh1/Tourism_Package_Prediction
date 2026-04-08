@@ -49,5 +49,11 @@ for file_path in files:
         repo_id="chaitram/tourism-package-prediction",
         repo_type="dataset",
         commit_message="Uploading processed files",
-        create_pr=True
+        create_pr=False
     )
+
+
+print("Files uploaded successfully to HuggingFace.")
+
+import time
+time.sleep(60)
